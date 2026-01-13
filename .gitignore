@@ -1,6 +1,5 @@
 # Datasets and Large Files
 dataset.zip
-data_splits/
 saved_datasets_chkpnts/
 repros/
 
@@ -41,3 +40,4 @@ MANIFEST
 /score_experts_viz/composer_experts_viz
 humdrum/
 /score_experts_viz/experts_viz
+*.Identifier
