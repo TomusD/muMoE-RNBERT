@@ -1,0 +1,13 @@
+pandas
+pyyaml
+omegaconf
+dacite
+h5py
+sh
+scikit-learn
+matplotlib
+pandas
+seaborn
+-e ./music_df
+-e ./reprs
+-e ./write_seqs
