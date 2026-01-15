@@ -153,7 +153,7 @@ python score_experts_viz/expert_analysis.py \
     --inter-path /path/to/deduplicated_data_mean.csv \
     --output-dir /path/to/save/pianorolls \
     --score BI73 \
-    --n-experts 17 \
+    --expert 17 \
     --threshold 0.4 \
     --n-notes 50000 \
     --notes-analysis
