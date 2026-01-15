@@ -2,7 +2,7 @@
 
 This repository contains the official implementation of the model described in the 2026 ICASSP paper **"Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts"**.
 
-If you find this work useful in your research, please cite the paper or my thesis which has more information about the project and some ablation studies:
+If you find this work useful in your research, please cite the paper or my thesis, which has more information about the project and some ablation studies:
 
 <!-- ```bibtex
 @inproceedings{triantafyllou2026mumoernbert,
@@ -38,7 +38,7 @@ You may need to run the following additional commands to configure the environme
 
 ### Environment Configuration
 
-Ensure your python path includes the necessary submodules for data representation, this may be usefull when building the data(step 2 in RNBERT README) :
+Ensure your Python path includes the necessary submodules for data representation, this may be useful when building the data(step 2 in RNBERT README) :
 
 ```bash
 export PYTHONPATH=write_seqs:reprs:music_df
@@ -57,7 +57,7 @@ pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.0.1+c
 
 *Check [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html) for the URL matching your system.*
 
-Once you have completed the RNBERT setup (i.e., you are able to fine-tune a basic RNBERT model), you are ready to train a μMoE-RNBERT model and reproduce the results or built on it.
+Once you have completed the RNBERT setup (i.e., you can fine-tune a basic RNBERT model), you are ready to train a μMoE-RNBERT model and reproduce the results or build on it.
 
 ---
 
@@ -88,7 +88,7 @@ python musicbert_fork/training_scripts/train_chord_tones.py \
 
 ## 3. Extracting Expert Interpretability Data
 
-Once training is complete, use this command to run inference on the test set and extract the expert coefficients. This script saves a CSV file containing the activation values for every expert on every note, which we will use for the visualizations and analysis. Unfortunately it's slow and as we increase the number of experts it gets slower.
+Once training is complete, use this command to run inference on the test set and extract the expert coefficients. This script saves a CSV file containing the activation values for every expert on every note, which we will use for the visualizations and analysis. Unfortunately, it's slow, and as we increase the number of experts, it gets slower.
 
 ```bash
 python musicbert_fork/eval_scripts/save_multi_task_predictions.py \
@@ -107,7 +107,7 @@ python musicbert_fork/eval_scripts/save_multi_task_predictions.py \
 
 ## 4. Post-Processing: Deduplicating Expert Coefficients
 
-Because the model uses a segmented window we have overlapping coefficients, thus some notes appear multiple times in the raw CSV output. This script deduplicates these duplicates, by averaging the coefficients or dropping duplicates, to create a clean, coefficients set for analysis.
+Because the model uses a segmented window, we have overlapping coefficients, thus some notes appear multiple times in the raw CSV output. This script deduplicates these duplicates by averaging the coefficients or dropping duplicates, to create a clean, coefficients set for analysis.
 
 ```bash
 python score_experts_viz/dedouble_csv.py \
@@ -125,7 +125,7 @@ python score_experts_viz/dedouble_csv.py \
 
 To analyze what musical concepts experts are learning, use the following script. This generates bar charts showing the count of occurrences of predicted labels when a specific expert is active(above the threshold value). 
 
-This corresponds to the "Quantitative Analysis" section of the paper, where we count label occurrences above a coefficient threshold.
+This corresponds to the "Quantitative Analysis" section of the paper, where we count label occurrences above a coefficient threshold. **The expert index won't be the same as the paper because of randomness in the model, but the patterns will be.**
 
 ```bash
 python score_experts_viz/task_prediction_analysis.py \
@@ -144,7 +144,7 @@ python score_experts_viz/task_prediction_analysis.py \
 
 ## 6. Qualitative Analysis: Piano Roll Visualization
 
-To inspect the model's behavior on specific musical scores, use this script to generate piano roll visualizations. These plots overlay the expert's activation as a heatmap onto each note of the musical score, allowing you to see exactly where and when an expert activates (e.g., during specific key modulations).
+To inspect the model's behavior on specific musical scores, use this script to generate piano roll visualizations. These plots overlay the expert's activation as a heatmap onto each note of the musical score, allowing you to see exactly where and when an expert activates (e.g., during specific key modulations). **The expert index won't be the same as the paper because of randomness in the model, but the patterns will be.**
 
 This corresponds to the "Qualitative Analysis" section of the paper.
 
@@ -160,7 +160,7 @@ python score_experts_viz/expert_analysis.py \
 
 ```
 
-* **`--score`**: The specific Score name from dataset you want to visualize (e.g., `BI73` which is chopin's Mazurka No.1 (BI 73)). Must be an exact match of the name of the score in the dataset.
+* **`--score`**: The specific Score name from the dataset you want to visualize (e.g., `BI73`, which is Chopin's Mazurka No.1 (BI 73)). Must be an exact match of the name of the score in the dataset.
 * **`--expert`**: The index of the expert you want to analyze (e.g., `17`).
 * **`--threshold`**: Coefficients below this value will appear black/inactive in the piano roll.
 * **`--n-notes`**: Limits the visualization to a specific number of notes.
