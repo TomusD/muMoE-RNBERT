@@ -169,20 +169,18 @@ python score_experts_viz/expert_analysis.py \
 
 ## Resources & Visualizations
 
-To enable immediate analysis of our findings without the need for training or heavy inference, we provide pre-computed expert coefficient files and a collection of visualizations.
-
-**[ 🔗 Download Pre-computed Data & Visualizations Here ](https://www.google.com/search?q=https://your-link-placeholder-here)**
+To enable direct analysis of our findings without the need for training or heavy inference, we provide pre-computed expert coefficient files and a collection of visualizations.
 
 ### Available Resources:
 
-* **Expert Coefficient CSVs:** Ready-to-use data for analysis.
+* **Expert Coefficient CSVs:** Ready-to-use data for analysis. **[Download Here](https://drive.google.com/file/d/1Wr8UE2NEjE0cWyxhH3Qeae8gHXRd--2x/view?usp=sharing)**
     * `coeff_experts_48.csv` (Used in main paper analysis)
     * `coeff_experts_256.csv`
     * `coeff_experts_1024.csv`
 
 
 * **Extended Analysis:**
-    * **Qualitative:** Additional piano roll heatmaps for various experts and scores.
-    * **Quantitative:** Full bar charts for expert specializations across different tasks and harmonic functions.
+    * **Qualitative:** Additional piano roll heatmaps for various experts and scores. **[Download Here](https://drive.google.com/drive/folders/1KwWs4h1KsSwv5QH58ZuxVYPmCQ_EMcuM?usp=sharing)**
+    * **Quantitative:** Full bar charts for expert specializations across different tasks and harmonic functions. **[Download Here](https://drive.google.com/drive/folders/1AKWqigeSvJQbpI9IlTOg0RfSmEoGqj4u?usp=sharing)**
 
 ---
