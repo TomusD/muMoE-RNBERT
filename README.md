@@ -2,7 +2,7 @@
 
 This repository contains the official implementation of the model described in the 2026 ICASSP paper **"Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts"**.
 
-If you find this work useful in your research, please cite the paper or my thesis, which has more information about the project and some ablation studies:
+If you find this work useful in your research, please cite the paper or my thesis, which has a bit more information about the project and some ablation studies:
 
 <!-- ```bibtex
 @inproceedings{triantafyllou2026mumoernbert,
