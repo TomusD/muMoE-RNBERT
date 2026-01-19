@@ -117,7 +117,7 @@ python score_experts_viz/dedouble_csv.py \
 
 ```
 
-*Use `--mean` to average overlapping coefficients or `--drop` to keep only the first occurrence.*
+Use **`--mean`** to average overlapping coefficients or **`--drop`** to keep only the first occurrence.
 
 ---
 
