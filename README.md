@@ -65,7 +65,7 @@ Once you have completed the RNBERT setup (i.e., you can fine-tune a basic RNBERT
 
 This command fine-tunes the MusicBERT backbone using the μMoE architecture. It freezes the first 9 pre-trained layers and applies the Multilinear Mixture of Experts (CP decomposition) to the final 3 layers, using 48 experts as described in the paper.
 
-> **Important:** Ensure you have downloaded the pre-trained MusicBERT checkpoint before running this command:
+> **Important:** Ensure you have downloaded the pre-trained MusicBERT checkpoint before running this command.
 
 ```bash
 python musicbert_fork/training_scripts/train_chord_tones.py \
