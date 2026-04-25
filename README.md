@@ -1,6 +1,6 @@
 # μMoE-RNBERT: Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts
 
-This repository contains the official implementation of the model described in the ICASSP 2026 paper **"Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts"**.
+This repository contains the official implementation of the model described in the ICASSP 2026 paper[paper](https://drive.google.com/file/d/1AxEq5o17pqSM4ofU_voqHWCGsIwECavb/view?usp=sharing) **"Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts"**.
 
 If you find this work useful in your research, please cite the paper: 
 
