@@ -2,27 +2,33 @@
 
 This repository contains the official implementation of the model described in the ICASSP 2026 paper **"Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts"**.
 
-<!-- If you find this work useful in your research, please cite the paper or my thesis, which has a bit more information about the project and some ablation studies: 
+If you find this work useful in your research, please cite the paper: 
 
 ```bibtex
-@inproceedings{triantafyllou2026mumoernbert,
-  title={Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts},
+@INPROCEEDINGS{11463689,
   author={Triantafyllou, Thanasis and Nicolaou, Mihalis A. and Panagakis, Yannis},
-  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-  year={2026}
+  booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={16082-16086},
+  doi={10.1109/ICASSP55912.2026.11463689}}
+
+
+```
+Or my thesis, which has a bit more information about the project and some ablation studies
+
+```bibtex
+@mastersthesis{uoadl:5325645,
+    BIBTEX_ENTRY = "masterthesis",
+    year = "2026",
+    school = "National and Kapodistrian University of Athens",
+    author = "Triantafyllou Athanasios",
+    title = "Interpretable and Efficient Music Harmonic Analysis Using Multilinear Mixture of Experts and Parameter-Efficient Fine-Tuning Methods"
 }
 
 ```
-
-```bibtex
-@inproceedings{triantafyllou2026mumoernbert,
-  title={Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts},
-  author={Triantafyllou, Thanasis and Nicolaou, Mihalis A. and Panagakis, Yannis},
-  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-  year={2026}
-}
-
-``` -->
 
 ## Acknowledgments
 
@@ -38,7 +44,7 @@ You may need to run the following additional commands to configure the environme
 
 ### Environment Configuration
 
-Ensure your Python path includes the necessary submodules for data representation, this may be useful when building the data(step 2 in RNBERT README) :
+Ensure your Python path includes the necessary submodules for data representation. This may be useful when building the data(step 2 in RNBERT README) :
 
 ```bash
 export PYTHONPATH=write_seqs:reprs:music_df
@@ -107,7 +113,7 @@ python musicbert_fork/eval_scripts/save_multi_task_predictions.py \
 
 ## 4. Post-Processing: Deduplicating Expert Coefficients
 
-Because the model uses a segmented window, we have overlapping coefficients, thus some notes appear multiple times in the raw CSV output. This script deduplicates these duplicates by averaging the coefficients or dropping duplicates, to create a clean, coefficients set for analysis.
+Because the model uses a segmented window, we have overlapping coefficients, some notes appear multiple times in the raw CSV output. This script deduplicates these duplicates by averaging the coefficients or dropping duplicates, to create a clean, coefficients set for analysis.
 
 ```bash
 python score_experts_viz/dedouble_csv.py \
