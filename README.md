@@ -10,8 +10,6 @@ If you find this work useful in your research, please cite the paper:
   booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
   title={Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts}, 
   year={2026},
-  volume={},
-  number={},
   pages={16082-16086},
   doi={10.1109/ICASSP55912.2026.11463689}}
 
