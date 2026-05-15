@@ -15,7 +15,7 @@ If you find this work useful in your research, please cite the paper:
 
 
 ```
-And if you find my thesis useful, which has a bit more information about the project and some ablation studies:
+And also my thesis, if you find it useful, which has a bit more information about the project and some ablation studies:
 
 ```bibtex
 @mastersthesis{uoadl:5325645,
